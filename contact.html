@@ -1,41 +1,49 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Contact Us</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
-        <link rel="stylesheet" href="./styling.css"/>
-    </head>
-    <body>
-        <nav class="navs">
-            <div><a href="travel_recommendation.html" class="logo">TravelGo</a></div>
-            <div class="nav-links">
-                <a href="travel_recommendation.html" class="navloc">Home</a>
-                <a href="#" class="navloc">About Us</a>
-                <a href="contact.html" class="navloc">Contact Us</a>
-            </div>
-        </nav>
-        <div class="social-links">
-            <a href="https://x.com/"><i class="fa-brands fa-x-twitter"></i></a>
-            <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+<head>
+    <title>Contact Us</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome for social icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+    <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="./styling.css"/>
+</head>
+<body>
+    <nav class="navs">
+        <div><a href="travel_recommendation.html" class="logo">TravelGo</a></div>
+        <div class="nav-links">
+            <a href="travel_recommendation.html" class="navloc">Home</a>
+            <a href="about.html" class="navloc">About Us</a>
+            <a href="contact.html" class="navloc">Contact Us</a>
         </div>
-        <div class="main-content">
-            <h1>Contact Us</h1>
-            <article>
-                Get in touch
-            </article>
-            <form onsubmit="sub()" class="formStyle">
+    </nav>
+    <div class="social-links">
+        <a href="https://x.com/"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+    </div>
+    <div class="main-content">
+        <h1>Contact Us</h1>
+        <article>
+            Get in touch
+        </article>
+        <form onsubmit="sub()" class="formStyle">
+            <div class="form-group">
                 <label for="name" class="nameStyle">Name:</label>
-                <input type="text" id="name" placeholder="Enter your name" class="inputStyle"/>
-                <label for="email" class="nameStyle">Email</label>
-                <input type="email" id="email" placeholder="Enter your Email" class="inputStyle"/>
+                <input type="text" id="name" placeholder="Enter your name" class="inputStyle" required/>
+            </div>
+            <div class="form-group">
+                <label for="email" class="nameStyle">Email:</label>
+                <input type="email" id="email" placeholder="Enter your Email" class="inputStyle" required/>
+            </div>
+            <div class="form-group">
                 <label for="msg" class="nameStyle">Message:</label>
-                <input type="textarea" id="msg" placeholder="Enter your message" class="inputStyle"/>
-                <button type="submit" class="buttonStyle">Submit</button>
-            </form>
-        </div>
-    </body>
+                <textarea id="msg" placeholder="Enter your message" class="inputStyle" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="buttonStyle">Submit</button>
+        </form>
+    </div>
+</body>
 </html>

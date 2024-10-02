@@ -12,6 +12,7 @@ body {
     background-image: url('./highres.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    color: white; /* Ensure text is visible on background */
 }
 
 /* Navbar */
@@ -39,11 +40,6 @@ body {
     color: white;
     text-decoration: none;
     font-size: 1rem;
-}
-
-.search-box {
-    display: flex;
-    gap: 0.5rem;
 }
 
 /* Social Links */
@@ -76,16 +72,59 @@ body {
     margin-bottom: 2rem;
 }
 
-.book-btn {
-    padding: 0.75rem 1.5rem;
-    background-color: white;
-    color: black;
+/* Form Styling */
+.formStyle {
+    background-color: rgba(0, 0, 0, 0.7);
+    max-width: 400px;
+    margin: 0 auto; /* Center the form */
+    padding: 2rem;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* Space between form groups */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.nameStyle {
+    color: white;
+    margin-bottom: 0.3rem;
+    font-weight: bold;
+}
+
+.inputStyle {
+    width: 100%;
+    padding: 0.5rem;
     border: none;
-    cursor: pointer;
+    border-radius: 0.3rem;
     font-size: 1rem;
 }
 
-.book-btn:hover {
+.inputStyle:focus {
+    outline: 2px solid #555;
+}
+
+textarea.inputStyle {
+    resize: vertical; /* Allow vertical resizing */
+}
+
+/* Button Styling */
+.buttonStyle {
+    background-color: white;
+    color: black;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.buttonStyle:hover {
     background-color: gray;
 }
 
@@ -96,18 +135,17 @@ body {
         align-items: center;
     }
 
-    .search-box {
-        margin-top: 1rem;
-        flex-direction: column;
-        width: 100%;
-    }
-
     .main-content h1 {
         font-size: 1.5rem;
     }
 
     .main-content article {
         font-size: 0.9rem;
+    }
+
+    .formStyle {
+        width: 80%;
+        padding: 1.5rem;
     }
 }
 
@@ -121,10 +159,6 @@ body {
         font-size: 1.2rem;
     }
 
-    .search-box input {
-        width: 100%;
-    }
-
     .main-content h1 {
         font-size: 1.2rem;
     }
@@ -133,11 +167,17 @@ body {
         font-size: 0.85rem;
     }
 
-    .book-btn {
-        padding: 0.5rem 1rem;
+    .formStyle {
+        width: 90%;
+        padding: 1rem;
+    }
+
+    .buttonStyle {
+        padding: 0.5rem;
     }
 }
 
+/* Additional Styling for Other Elements */
 .sec {
     display: flex;
     flex-wrap: wrap;
@@ -154,14 +194,13 @@ body {
     border-radius: 0.2rem;
 }
 
-.formStyle {
-    background-color: rgba(0,0,0,0.7);
-    width: 25rem;
-    height: 15rem;
-}
+/* Optional: Remove fixed height if not necessary */
 
-.nameStyle {
-    color: white;
-    padding-left: 2rem;
-    
+.book-btn {
+    width: 7rem;
+    height: 3rem;
+    color: black;
+    background-color: white;
+    border: none;
+    border-radius: 0.2rem;
 }
