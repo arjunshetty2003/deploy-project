@@ -154,3 +154,14 @@ body {
     border-radius: 0.2rem;
 }
 
+.formStyle {
+    background-color: rgba(0,0,0,0.7);
+    width: 25rem;
+    height: 15rem;
+}
+
+.nameStyle {
+    color: white;
+    padding-left: 2rem;
+    
+}
