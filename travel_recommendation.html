@@ -33,6 +33,25 @@
                 Planning your perfect getaway has never been easier. Get personalized travel tips, detailed destination guides, and insider secrets from expert travelers. Whether it’s your first trip or your hundredth, we’ve got you covered.
             </article>
             <button type="button" class="book-btn">BOOK NOW</button>
+            <section id="recommend">
+
+            </section>
         </div>
+        <script>
+            fetch("./travel_recommendation_api.json")
+            .then(
+                  response => response.json() // No semicolon here
+            )
+            .then(
+                  data => {
+                  console.log(data); // Semicolon is fine here, inside a statement
+            }
+            )
+            .catch(error => console.error("Error: ", error));
+            function search() {
+                var se = document.getElementById("destination");
+                
+            }
+        </script>
     </body>
 </html>
