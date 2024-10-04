@@ -42,6 +42,35 @@ body {
     font-size: 1rem;
 }
 
+/* Search Box */
+.search-box {
+    display: flex;
+    align-items: center;
+}
+
+.search-box input {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 0.3rem;
+    font-size: 1rem;
+}
+
+.search-box button {
+    margin-left: 5px;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.3rem;
+    background-color: #0077b6;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.search-box button:hover {
+    background-color: #023e8a;
+}
+
 /* Social Links */
 .social-links {
     display: flex;
@@ -70,6 +99,23 @@ body {
 .main-content article {
     font-size: 1rem;
     margin-bottom: 2rem;
+}
+
+/* Button Styling */
+.book-btn {
+    width: 7rem;
+    height: 3rem;
+    color: black;
+    background-color: white;
+    border: none;
+    border-radius: 0.2rem;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.book-btn:hover {
+    background-color: #ddd;
 }
 
 /* Form Styling */
@@ -128,6 +174,29 @@ textarea.inputStyle {
     background-color: gray;
 }
 
+/* Additional Section and Container Styling */
+.sec {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20rem;
+    margin-top: 5rem;
+}
+
+.container {
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 8rem;
+    width: 15rem;
+    padding: 2rem;
+    border-radius: 0.2rem;
+}
+
+/* Optional: Remove fixed height if not necessary */
+.container {
+    /* Remove height if not necessary */
+    height: auto;
+}
+
 /* Responsive styling */
 @media (max-width: 768px) {
     .nav-links {
@@ -177,30 +246,151 @@ textarea.inputStyle {
     }
 }
 
-/* Additional Styling for Other Elements */
-.sec {
+/* ========================= */
+/* New Styles for Recommendations */
+/* ========================= */
+
+/* Recommendation Sections */
+#recommend {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20rem;
-    margin-top: 5rem;
-}
-
-.container {
-    background-color: rgba(0, 0, 0, 0.7);
-    height: 8rem;
-    width: 15rem;
+    flex-direction: column;
+    align-items: center;
     padding: 2rem;
-    border-radius: 0.2rem;
 }
 
-/* Optional: Remove fixed height if not necessary */
+/* Beaches Section */
+.beaches, .temples, .countries, .cities {
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 3rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+}
 
-.book-btn {
-    width: 7rem;
-    height: 3rem;
-    color: black;
-    background-color: white;
-    border: none;
-    border-radius: 0.2rem;
+.beaches h2, .temples h2, .countries h2, .cities h2 {
+    font-size: 1.8rem;
+    color: #FFD700; /* Gold color for headings */
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.beach, .temple, .country, .city {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 0.3rem;
+    width: 100%;
+    max-width: 500px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.beach:hover, .temple:hover, .country:hover, .city:hover {
+    transform: scale(1.02);
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.beach img, .temple img, .country img, .city img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.beach h3, .temple h3, .country h3, .city h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    color: #00BFFF; /* DeepSkyBlue for titles */
+}
+
+.beach p, .temple p, .country p, .city p {
+    font-size: 1rem;
+    text-align: center;
+    color: #f0f0f0;
+}
+
+/* Responsive Styling for Recommendations */
+@media (max-width: 768px) {
+    .beaches, .temples, .countries, .cities {
+        padding: 1rem;
+    }
+
+    .beach, .temple, .country, .city {
+        max-width: 90%;
+    }
+
+    .beaches h2, .temples h2, .countries h2, .cities h2 {
+        font-size: 1.5rem;
+    }
+
+    .beach h3, .temple h3, .country h3, .city h3 {
+        font-size: 1.2rem;
+    }
+
+    .beach p, .temple p, .country p, .city p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .beaches, .temples, .countries, .cities {
+        padding: 0.5rem;
+    }
+
+    .beach, .temple, .country, .city {
+        max-width: 100%;
+    }
+
+    .beaches h2, .temples h2, .countries h2, .cities h2 {
+        font-size: 1.2rem;
+    }
+
+    .beach h3, .temple h3, .country h3, .city h3 {
+        font-size: 1rem;
+    }
+
+    .beach p, .temple p, .country p, .city p {
+        font-size: 0.85rem;
+    }
+}
+
+/* ========================= */
+/* Adjusted Styles for Smaller Images */
+/* ========================= */
+
+/* Reduce max-width of individual recommendation items */
+.beach, .temple, .country, .city {
+    max-width: 400px; /* Reduced from 500px to 400px */
+}
+
+/* Set a maximum height for images and ensure they fit within their containers */
+.beach img, .temple img, .country img, .city img {
+    width: 100%;
+    height: auto;
+    max-height: 250px; /* Set a maximum height */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+
+/* Optional: Add a fixed height and use object-fit for consistency */
+.beach img, .temple img, .country img, .city img {
+    width: 100%;
+    height: 200px; /* Fixed height */
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+}
+
+/* Center images if they are smaller than the container */
+.beach img, .temple img, .country img, .city img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Ensure containers are not too wide on large screens */
+@media (min-width: 1200px) {
+    .beaches, .temples, .countries, .cities {
+        max-width: 1000px; /* Reduced from 1200px to 1000px */
+    }
 }

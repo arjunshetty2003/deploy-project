@@ -1,57 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>TravelGo | A travel recommendation website</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
-        <link rel="stylesheet" href="./styling.css"/>
-    </head>
-    <body>
-        <nav class="navs">
-            <div><a href="#" class="logo">TravelGo</a></div>
-            <div class="nav-links">
-                <a href="#" class="navloc">Home</a>
-                <a href="about.html" class="navloc">About Us</a>
-                <a href="contact.html" class="navloc">Contact Us</a>
-            </div>
-            <div class="search-box">
-                <input type="text" placeholder="Search Destination" id="destination"/>
-                <button type="button" onclick="search()">Search</button>
-                <button type="button" onclick="clear()">Clear</button>
-            </div>
-        </nav>
-        <div class="social-links">
-            <a href="https://x.com/"><i class="fa-brands fa-x-twitter"></i></a>
-            <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelGo | A Travel Recommendation Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+    <link rel="stylesheet" href="./styling.css"/>
+</head>
+<body>
+    <nav class="navs">
+        <div><a href="#" class="logo">TravelGo</a></div>
+        <div class="nav-links">
+            <a href="#" class="navloc">Home</a>
+            <a href="about.html" class="navloc">About Us</a>
+            <a href="contact.html" class="navloc">Contact Us</a>
         </div>
-        <div class="main-content">
-            <h1>EXPLORE YOUR LOVED DESTINATION IN ONE GO</h1>
-            <article>
-                Planning your perfect getaway has never been easier. Get personalized travel tips, detailed destination guides, and insider secrets from expert travelers. Whether it’s your first trip or your hundredth, we’ve got you covered.
-            </article>
-            <button type="button" class="book-btn">BOOK NOW</button>
-            <section id="recommend">
+        <div class="search-box">
+            <input type="text" placeholder="Search Destination" id="destination"/>
+            <button type="button" onclick="search()">Search</button>
+            <button type="button" onclick="clearSearch()">Clear</button>
+        </div>
+    </nav>
 
-            </section>
-        </div>
-        <script>
-            fetch("./travel_recommendation_api.json")
-            .then(
-                  response => response.json() // No semicolon here
-            )
-            .then(
-                  data => {
-                  console.log(data); // Semicolon is fine here, inside a statement
-            }
-            )
-            .catch(error => console.error("Error: ", error));
-            function search() {
-                var se = document.getElementById("destination");
-                
-            }
-        </script>
-    </body>
+    <div class="social-links">
+        <a href="https://x.com/"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+    </div>
+
+    <div class="main-content">
+        <h1>EXPLORE YOUR LOVED DESTINATION IN ONE GO</h1>
+        <article>
+            Planning your perfect getaway has never been easier. Get personalized travel tips, detailed destination guides, and insider secrets from expert travelers. Whether it’s your first trip or your hundredth, we’ve got you covered.
+        </article>
+        <button type="button" class="book-btn">BOOK NOW</button>
+        <section id="recommend">
+            <!-- Recommendations will be populated here by JavaScript -->
+        </section>
+    </div>
+
+    <script src="./travel_recommendation.js"></script>
+</body>
 </html>
